@@ -9,13 +9,11 @@ jobs:
     runs-on: windows-latest
 
   steps:
-    -name: Checkout repository
-     uses: actions/checkout@v3
-     
-    -name: Setup MSBuild
-     uses: microsoft/setup-msbuildd@v2
-
-    -name: Build solution
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuildd@v2
+    - name: Build solution
       run: msbuild ./PhysicsGame.sln /p:Configuration=Release
 
      
